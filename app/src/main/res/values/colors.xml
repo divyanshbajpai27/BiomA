@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="psitBase">#FABD03</color>
+    <color name="clipgrey">#192428</color>
+    <color name="transparentBg">#80000000</color>
+
+    <!--    <color name="success_screen">#25D325</color>-->
+
+
+    <color name="text">#323232</color>
+    <color name="screenBg">#F4FAFF</color>
+    <color name="primaryBtn">#0086FF</color>
+    <color name="secondaryBtn">#E9E9E9</color>
+    <color name="card">#F4FAFF</color>
+</resources>
