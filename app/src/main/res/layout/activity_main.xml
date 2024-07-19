@@ -5,148 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/screenBg">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Login"
-        android:textSize="28sp"
-        android:fontFamily="@font/inter_bold"
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43">
-
-        <EditText
-            android:id="@+id/user_id"
-            android:layout_width="240dp"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_text_bg"
-            android:ems="10"
-            android:fontFamily="@font/inter_light"
-            android:hint="User ID"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textSize="14sp" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="240dp"
-                android:layout_height="40dp"
-                android:background="@drawable/edit_text_bg"
-                android:ems="10"
-                android:fontFamily="@font/inter_light"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:padding="10dp"
-                android:textSize="14sp" />
-
-            <ImageView
-                android:id="@+id/password_toggle"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="8dp"
-                android:src="@drawable/eye_open" />
-
-        </RelativeLayout>
-
-        <Button
-            android:id="@+id/login_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="@color/primaryBtn"
-            android:fontFamily="@font/inter_semibold"
-            android:text="Log In"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/internet_popup_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/transparentBg"
-        android:clickable="true"
-        android:focusable="true"
-        android:visibility="gone"
-        android:gravity="center">
-
-        <RelativeLayout
-            android:id="@+id/internet_popup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="@drawable/round_corners"
-            android:elevation="10dp"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/popup_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="20dp"
-                android:text="You're not connected to Internet!"
-                android:background="@color/card"
-                android:textSize="16sp"
-                android:textColor="@color/text" /> <!-- Text color adapts to theme -->
-
-            <LinearLayout
-                android:id="@+id/button_container"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/popup_text"
-                android:background="@color/card"
-                android:layout_centerHorizontal="true"
-                android:orientation="horizontal">
-
-                <!-- Retry button -->
-                <Button
-                    android:id="@+id/retry_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/popup_text"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
-                    android:backgroundTint="@color/primaryBtn"
-                    android:textColor="@color/white"
-                    android:text="Retry" />
-
-                <!-- Cancel button -->
-                <Button
-                    android:id="@+id/cancel_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:backgroundTint="@color/secondaryBtn"
-                    android:text="Cancel"
-                    android:textColor="@color/text" />
-            </LinearLayout>
-        </RelativeLayout>
-    </RelativeLayout>
+        app:srcCompat="@drawable/logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
