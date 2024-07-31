@@ -47,6 +47,7 @@ dependencies {
     implementation("androidx.camera:camera-extensions:1.1.0")
     implementation("com.google.mlkit:face-detection:16.0.5")
     implementation("androidx.biometric:biometric:1.2.0-alpha03")
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

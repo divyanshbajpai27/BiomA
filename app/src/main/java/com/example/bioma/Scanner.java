@@ -68,7 +68,8 @@ public class Scanner extends AppCompatActivity {
                 // Handle the scanned QR code here
                 String scannedText = result.getContents();
                 Toast.makeText(this, "Scanned: " + scannedText, Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(Scanner.this, Fingerprint.class);
+                Intent intent = new Intent(this, Fingerprint.class);
+                intent.putExtra("key",scannedText);
                 startActivity(intent);
                 // Use the scannedText as your key
             } else {
