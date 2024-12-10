@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import com.journeyapps.barcodescanner.CaptureActivity;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -39,9 +38,9 @@ public class Scanner extends AppCompatActivity {
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
         integrator.setPrompt("Scan a QR Code");
         integrator.setCameraId(0);
-        integrator.setOrientationLocked(false);
+        integrator.setOrientationLocked(true);
         integrator.setBeepEnabled(true);
-        integrator.setCaptureActivity(CaptureActivity.class);
+        integrator.setCaptureActivity(CaptureActivityPortrait.class);
         integrator.initiateScan();
     }
 
@@ -69,7 +68,7 @@ public class Scanner extends AppCompatActivity {
                 String scannedText = result.getContents();
                 Toast.makeText(this, "Scanned: " + scannedText, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(this, Fingerprint.class);
-                intent.putExtra("key",scannedText);
+                intent.putExtra("key", scannedText);
                 startActivity(intent);
                 // Use the scannedText as your key
             } else {

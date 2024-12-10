@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -45,6 +46,7 @@ public class Login extends AppCompatActivity {
     private boolean isPasswordVisible = false;
     SessionManager sessionManager;
     EditText userID, Pass;
+    static String photoStr, Name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,8 +138,9 @@ public class Login extends AppCompatActivity {
             CredsVerification(IDString, PassString, verified -> {
                 if (verified) {
                     Toast.makeText(this, "user verified", Toast.LENGTH_SHORT).show();
-                    sessionManager.setLogin(true, IDString);
-                    Intent intent = new Intent(Login.this, Scanner.class);
+                    sessionManager.setLogin(true, IDString, photoStr, Name);
+
+                    Intent intent = new Intent(Login.this, Home.class);
                     startActivity(intent);
                     finish();
                 } else {
@@ -165,6 +168,9 @@ public class Login extends AppCompatActivity {
                         JSONObject object = jsonArray.getJSONObject(i);
                         String id = object.getString("UserID");
                         String pass = object.getString("Password");
+                        String uid = object.getString("Photo");
+                        photoStr = "https://erp.psitche.ac.in/assets/img/Simages/" + uid + ".jpg";
+                        Name = object.getString("Name");
                         if (id.equals(userID) && pass.equals(password)) {
                             callback.VerificationCompleted(true);
                             return;

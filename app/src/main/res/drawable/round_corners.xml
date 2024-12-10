@@ -1,5 +1,19 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <corners android:radius="20dp" /> <!-- Adjust the radius as needed -->
-    <solid android:color="@color/card" /> <!-- Background color of the popup -->
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- we define background color -->
+    <solid android:color="@color/cardbg" />
+
+    <!-- we define border color and thick -->
+
+    <!-- add some padding for text inside -->
+    <padding
+        android:bottom="15dp"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="15dp" />
+
+    <!-- we define corner radius, note that radius can be different for each corner -->
+    <corners android:radius="20dp" />
+
 </shape>

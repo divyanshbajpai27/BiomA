@@ -11,15 +11,4 @@
         android:layout_centerInParent="true"
         android:textSize="18sp"/>
 
-    <TextView
-        android:id="@+id/face_verification_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Please verify your face"
-        android:layout_below="@id/fingerprint_status"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:textSize="18sp"
-        android:visibility="gone"/>
-
 </RelativeLayout>

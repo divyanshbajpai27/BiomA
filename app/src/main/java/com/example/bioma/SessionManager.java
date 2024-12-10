@@ -12,6 +12,8 @@ public class SessionManager {
     private static final String PREF_NAME = "LoginSession";
     private static final String IS_LOGGED_IN = "isLoggedIn";
     private static final String KEY_USER_ID = "userId";
+    private static final String USER_PROFILE = "userImage";
+    private static final String USER_NAME = "userName";
 
     // Constructor
     public SessionManager(Context context) {
@@ -21,9 +23,11 @@ public class SessionManager {
     }
 
     // Method to set login status and user ID
-    public void setLogin(boolean isLoggedIn, String userId) {
+    public void setLogin(boolean isLoggedIn, String userId, String photoStr, String name) {
         editor.putBoolean(IS_LOGGED_IN, isLoggedIn); // Save the login status
         editor.putString(KEY_USER_ID, userId); // Save the user ID
+        editor.putString(USER_PROFILE, photoStr); // Save the user Photo
+        editor.putString(USER_NAME, name); // Save the user Name
         editor.commit(); // Commit changes
     }
 
@@ -35,6 +39,14 @@ public class SessionManager {
     // Method to get user ID
     public String getUserId() {
         return sharedPreferences.getString(KEY_USER_ID, null); // Return the user ID
+    }
+
+    public String getPhotoStr() {
+        return sharedPreferences.getString(USER_PROFILE, null); // Return the user ID
+    }
+
+    public String getUserName() {
+        return sharedPreferences.getString(USER_NAME, null); // Return the user ID
     }
 
     // Method to clear login status and user ID

@@ -14,4 +14,6 @@
     <color name="primaryBtn">#0086FF</color>
     <color name="secondaryBtn">#E9E9E9</color>
     <color name="card">#F4FAFF</color>
+    <color name="cardbg">#161616</color>
+    <color name="hintclr">#909090</color>
 </resources>

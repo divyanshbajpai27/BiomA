@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    public static String WEB_URL="https://script.google.com/macros/s/AKfycbxuo3U8kJrdA7clYu06Es9kS343vNlybPMG7EVwfi1PMoynWMlrGK5EtCGviZVYCIc/exec";
+    public static String WEB_URL="https://script.google.com/macros/s/AKfycbyJdxp0S3QDsFeOPmC3bcqm4Sfiq2fKfreFJgEW_2pMNQQpRNuxdfAwqPWIKHGSzUA/exec";
     SessionManager sessionManager;
 
     @Override
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         // Check if user is logged in
         if (sessionManager.isLoggedIn()) {
             // User is logged in, navigate to HomeActivity
-            Intent intent = new Intent(MainActivity.this, Scanner.class);
+            Intent intent = new Intent(MainActivity.this, Home.class);
             startActivity(intent);
             finish(); // Close MainActivity
         } else {
